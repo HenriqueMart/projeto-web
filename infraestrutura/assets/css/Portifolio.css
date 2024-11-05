@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+var {
+
+}
+
+/*Configuração da Página Completa*/
+body{
+    color: #000000;
+    background-color: #EFF6FF;
+}
+
+/*Configuração das Imagens.Display -> Renderização. Essa caixas estão block uma caixa em cima da outra,
+coloquei como inline -> uma caixa na frente do Outro*/
+
+/*gap -> Distância de Uma foto entre outra*/
+.image-conteiner{
+    display: flex;
+    gap: 20px;
+}
+
+/*Configurando Parâgrafo dentro da div*/
+.image-conteiner p{
+    text-align: center;
+}
+
+/*Configuração de Div*/
+#texto-azul{
+    color: #1E3A8A;
+}
+#texto-azulclaro{
+    color: #EFF6FF;   
+}
+#texto-azulescuro{
+    color: #1E40AF;
+}
+#texto-escuro{
+    color: #000000;
+}
+#texto-cinzar{
+    color: #D1D5DB;
+}
