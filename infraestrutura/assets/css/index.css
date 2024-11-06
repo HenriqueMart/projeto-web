@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+body{
+    color: #EFF6FF;
+    background-color: #1E3A8A;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+/*NAVEGAÇÃO*/
+header{
+    /*PERMITINDO FLEXIBILIDADE NOS ITENS*/
+   display: flex;  
+   /*ESPAÇO ENTRE OS ITENS*/
+   justify-content: space-between;
+   /*Dando espeço para cabeçalho*/
+   padding-bottom: 25px
+}
+
+header p {
+    align-self: flex-start;
+    text-align: left;
+    /*Garantido que ele fica na esquerda, tirando os espaçamento*/
+    margin: 0;
+
+}
+
+header h1{
+    margin: 0;
+}
+nav{
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: #1E40AF;
+    font-size: 20px;
+}
+nav a {
+    align-self: center;
+    text-align: left;
+    text-decoration: none;
+}
+
+
+/*TÍTULOS*/
+h1, h2, h3{
+    font-size: 30px;
+}
+p{
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+a{
+    color: #D1D5DB;
+    
+}

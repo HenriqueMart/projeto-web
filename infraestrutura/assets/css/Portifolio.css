@@ -6,8 +6,10 @@ var {
 
 /*Configuração da Página Completa*/
 body{
-    color: #000000;
-    background-color: #EFF6FF;
+    color: #EFF6FF;
+    background-color: #1E3A8A;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
 }
 
 /*Configuração das Imagens.Display -> Renderização. Essa caixas estão block uma caixa em cima da outra,
@@ -39,4 +41,24 @@ coloquei como inline -> uma caixa na frente do Outro*/
 }
 #texto-cinzar{
     color: #D1D5DB;
+}
+
+/*Navegações*/
+
+header {
+    font-size: 20px;
+}
+nav{
+    background-color: #1E40AF;
+    padding: 10px;
+    justify-content: center;
+    
+}
+nav a{
+    color: #EFF6FF;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    text-decoration: none;
+    justify-content: space-between;
+    text-align: left;
 }
