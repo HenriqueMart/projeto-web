@@ -31,13 +31,15 @@ header h1{
 nav{
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     padding: 10px;
     background-color: #1E40AF;
     font-size: 20px;
+    text-align: left;
+    width: 100%;
 }
 nav a {
-    align-self: center;
-    text-align: left;
+    margin-right: 20px;
     text-decoration: none;
 }
 
@@ -53,4 +55,8 @@ p{
 a{
     color: #D1D5DB;
     
+}
+
+.Link-atv3{
+    display: inline;
 }

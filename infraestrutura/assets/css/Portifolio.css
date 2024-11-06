@@ -10,6 +10,7 @@ body{
     background-color: #1E3A8A;
     font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
+    text-align: center;
 }
 
 /*Configuração das Imagens.Display -> Renderização. Essa caixas estão block uma caixa em cima da outra,
@@ -47,6 +48,10 @@ coloquei como inline -> uma caixa na frente do Outro*/
 
 header {
     font-size: 20px;
+    
+}
+header h1{
+    text-align: left;
 }
 nav{
     background-color: #1E40AF;
@@ -55,10 +60,52 @@ nav{
     
 }
 nav a{
+    /*Configuração caracterísitca*/
     color: #EFF6FF;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 14px;
+    padding: 5px;
+    /*Tirando linha de baixo da palavra*/
     text-decoration: none;
+    /*Colocando espaco no itens*/
     justify-content: space-between;
-    text-align: left;
+    /*Colocando texto a esquerda*/
+    text-align: right;
+}
+
+#capa{
+    position: relative;
+    height: 300px;
+    text-align: center; /*Alinha verticalmente*/
+    display: flex; /*Permiti que maior flexibilidade*/
+    justify-content: center; /*Conteúdo horizontal*/
+    align-items: center; /*Deixar o itens no meio*/
+    font-size: 24px;
+    overflow: hidden; /* Garante que o conteúdo do ::before não extrapole, passou seja cortado */
+  
+}
+
+#capa::before{
+    content: "";
+    position: absolute; /*Posicionamento Relativo, dentro da capa, limitando a capa o uso*/
+    top: 0;
+    margin: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../../assets/imagens/Capa.jpg); /*Colocando imagens no fundo da página*/
+    background-size: cover;
+    background-position: center;
+    /*Configuração para alterar o fundo da imagens*/
+    filter: blur(5px);
+    z-index: -1;
+}
+div{
+    /*Centralizando div*/
+    justify-content: center; /*Conteúdo horizontal*/
+    color: #000000;
+    height: 300px;
+    background-color: #D1D5DB;
+    align-items: center;
+    
 }
