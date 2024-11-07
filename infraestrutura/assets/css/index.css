@@ -29,13 +29,10 @@ header h1{
     margin: 0;
 }
 nav{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
     padding: 10px;
     background-color: #1E40AF;
     font-size: 20px;
-    text-align: left;
+    text-align: right;
     width: 100%;
 }
 nav a {
