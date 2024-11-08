@@ -6,10 +6,10 @@ var {
 
 /*Configuração da Página Completa*/
 body{
-    color: #EFF6FF;
-    background-color: #1E3A8A;
+    color: #000000;
+    background-color: #EFF6FF;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
 }
 
@@ -45,39 +45,59 @@ coloquei como inline -> uma caixa na frente do Outro*/
 }
 
 /*Navegações*/
-
-header {
-    font-size: 20px;
-    
-}
-header h1{
-    text-align: left;
-}
 nav{
-    background-color: #1E40AF;
     padding: 10px;
-    justify-content: center;
-    
-}
-nav a{
-    /*Configuração caracterísitca*/
-    color: #EFF6FF;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 14px;
-    padding: 5px;
-    /*Tirando linha de baixo da palavra*/
-    text-decoration: none;
-    /*Colocando espaco no itens*/
-    justify-content: space-between;
-    /*Colocando texto a esquerda*/
-    text-align: right;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    background-color: #1E40AF;
 }
 
+nav#menu ul{
+    list-style: none; /*Esconde o marcador*/
+    text-transform: uppercase; /*Maiusculo*/
+    position: relative; /*Ficará flutuando fora do caixa*/
+    top: 1px;
+    text-align: right;
+    right: 50px;
+    
+}
+
+nav#menu li{
+    display: inline-block; /*Vai ser exibido na mesma linha*/
+    padding: 10px; /*Interno do itens*/
+    margin: 5 px; /*Fora do itens*/
+    
+}
+
+nav#menu li:hover{
+    background-color: #000000;
+    transition: 0.7s; /*Transição da animação do Menu*/
+    opacity: 80%;
+}
+
+nav#menu a{
+    color:#D1D5DB;
+    text-decoration: none;
+}
+nav#menu a:hover{
+    color: #1E3A8A;
+    transition: 0.7s;
+}
+
+nav#menu h1{
+    position: absolute;
+    display: block;
+    color: #D1D5DB;
+   
+    
+}
+/*Main*/
 #capa{
     position: relative;
     height: 300px;
     text-align: center; /*Alinha verticalmente*/
-    display: flex; /*Permiti que maior flexibilidade*/
+    display: block; /*Permiti que maior flexibilidade*/
     justify-content: center; /*Conteúdo horizontal*/
     align-items: center; /*Deixar o itens no meio*/
     font-size: 24px;
@@ -106,6 +126,5 @@ div{
     color: #000000;
     height: 300px;
     background-color: #D1D5DB;
-    align-items: center;
-    
+    align-items: center;    
 }
