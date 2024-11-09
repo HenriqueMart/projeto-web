@@ -1,11 +1,13 @@
+*{
+    margin: 0;
+}
+
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
-    position: relative; /*Posicionamento de forma flexivel*/
     text-align: center; /*Centralizando texto*/
     align-items: center; /*Centralizando os itens*/
     justify-content: center; /*Centralizando a Caixa*/
-    display: block; /*Bloqueando as caixar para ficar uma de baixo da outra*/
     background-image: url(../imagens/Beckground.jpg); /*Imagens de Fundo*/
 
 }
@@ -50,4 +52,30 @@ a{
 
 .YT_video {
     text-align: center;
+}
+
+div .image-conteiner{
+    height: 300px;
+    align-items: center; /*Centralizando div*/
+    width: 100px;
+    height: 100px;
+    background-color: #000000; 
+}
+
+.image-conteiner > div{
+    display: inline-block; /*Conteúdo horizontal*/
+    color: #000000;
+    margin: 0 auto;
+    
+}
+
+.image-conteiner h2{
+    color: #000000;
+}
+
+article{
+    background-color: white;
+
+    justify-content: center;
+    align-items: center;
 }

@@ -1,22 +1,12 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Doto:wght@100..900&display=swap');
-
-
-:root {
-    --cor-azul: #1E3A8A;
-    --cor-Branco: #EFF6FF;
-    --cor-azulescuro: #1E40AF;
-    --cor-breto: #000000;
-    --cor-cinzar: #D1D5DB;
-}
-
-*{   
-    margin: 0;
-    padding: 0;
-}
+/*Navegação*/
+@import url(header-footer/header.css);
+/*Footer*/
+@import url(header-footer/footer.css);
 
 /*Configuração da Página Completa*/
+
 body{
     color: #000000;
     background-color: #EFF6FF;
@@ -39,48 +29,6 @@ body{
       min-width: 150px; /* Para telas ainda menores, a largura mínima será 150px */
     }
   }
-
-
-/*Navegações*/
-
-nav#menu ul{
-    background-color: var(--cor-breto);
-    padding: 5px; /*Definindo a largura de foro*/
-    opacity: 90%;
-    position: relative; /*permitindo uma forma relativa na tela*/
-    right: 1px;
-}
-
-nav#menu li{
-    list-style: none; /*Esconde o marcador*/
-    text-transform: uppercase; /*Maiusculo*/
-    top:auto;
-    text-align: center;
-    display: inline-block; /*Ficando em linha*/
-}
-
-nav#menu li a{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    color:var(--cor-cinzar);
-    text-decoration: none;
-    display: block; /*Tranformando um uma caixa para toda a área ser clicável*/
-    font-weight: 700; /*Bold*/
-    padding: 10px; /*Interno do itens*/
-   
-}
-
-nav#menu li:hover{
-    background-color: var(--cor-azulescuro);
-    
-    transition: 0.7s; /*Transição da animação do Menu*/
-    opacity: 90%; /*Transparência na caixa*/
-}
-
-
-nav#menu a:hover{
-    color: var(--cor-Branco);
-    transition: color 0.4s;
-}
 
 /*Main*/
 #capa{
@@ -149,23 +97,4 @@ coloquei como inline -> uma caixa na frente do Outro*/
 .image-conteiner{
     display: flex;
     gap: 20px;
-}
-
-/*Footer*/
-
-.footer{
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    width: 100%;
-    height: 100px;
-    padding: 0;
-    background-color: var(--cor-breto);
-    color: var(--cor-cinzar);   
-}
-
-.footer p{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 14px;
-    font-weight: 100;
 }

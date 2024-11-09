@@ -1,8 +1,12 @@
 @charset "UTF-8";
 
+/*Header & Footer*/
+@import url(header-footer/header.css);
+@import url(header-footer/footer.css);
+
 body{
-    color: #EFF6FF;
-    background-color: #1E3A8A;
+    color: var(--cor-cinzar);
+    background-color: var(--cor-azulescuro);
     font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
 }
@@ -30,14 +34,31 @@ header h1{
 }
 nav{
     padding: 10px;
-    background-color: #1E40AF;
+    background-color: var(--cor-azul);
     font-size: 20px;
-    text-align: right;
+    text-align: center;
     width: 100%;
+    display: block;
 }
-nav a {
-    margin-right: 20px;
+nav li{
+    width: 100%;
+    display: inline;
+    margin: 20px;
+    padding: 5px;
+    
+}
+
+nav li:hover{
+    background-color: var(--cor-breto);
+    transition: 0.6s;
+    opacity: 80%;
+    
+}
+
+.menu a{
+    display: inline-block;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 
@@ -56,4 +77,34 @@ a{
 
 .Link-atv3{
     display: inline;
+}
+
+main{
+    display: block;
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    height: auto;
+}
+
+/*Utilizando Media Queries, definindo o tamanho apra celular de forma resposível*/
+@media (max-width: 450px){
+    nav li {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    header h1{
+        font-size: 20px;
+        margin: 10px auto;
+    }
+    header p{
+        margin: 15px auto;
+        font-size: 10px;
+    }
+    main h2{
+        font-size: 20px;
+    }
+    main p{
+        font-size: 14px;
+    }
 }
