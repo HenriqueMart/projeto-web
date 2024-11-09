@@ -1,11 +1,19 @@
 @charset "UTF-8";
 
-var {
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Doto:wght@100..900&display=swap');
 
+
+:root {
+    --cor-azul: #1E3A8A;
+    --cor-Branco: #EFF6FF;
+    --cor-azulescuro: #1E40AF;
+    --cor-breto: #000000;
+    --cor-cinzar: #D1D5DB;
 }
 
 *{
     margin: 0;
+    padding: 0;
 }
 
 /*Configuração da Página Completa*/
@@ -15,99 +23,80 @@ body{
     font-family: 'Times New Roman', Times, serif;
     font-size: 16px;
     text-align: center;
-}
-
-/*Configuração das Imagens.Display -> Renderização. Essa caixas estão block uma caixa em cima da outra,
-coloquei como inline -> uma caixa na frente do Outro*/
-
-/*gap -> Distância de Uma foto entre outra*/
-.image-conteiner{
-    display: flex;
-    gap: 20px;
-}
-
-/*Configurando Parâgrafo dentro da div*/
-.image-conteiner p{
-    text-align: center;
-}
-
-/*Configuração de Div*/
-#texto-azul{
-    color: #1E3A8A;
-}
-#texto-azulclaro{
-    color: #EFF6FF;   
-}
-#texto-azulescuro{
-    color: #1E40AF;
-}
-#texto-escuro{
-    color: #000000;
-}
-#texto-cinzar{
-    color: #D1D5DB;
+    
 }
 
 /*Navegações*/
-nav{
-    display: block;
-    padding: 10px;
-    margin: 0;
-    outline: 0;
-    border: o;
-    background-color: #000000;
-}
 
 nav#menu ul{
-    list-style: none; /*Esconde o marcador*/
-    text-transform: uppercase; /*Maiusculo*/
-    position: relative; /*Ficará flutuando fora do caixa*/
-    top:auto;
-    text-align: right;
-    right: 50px;
-    
+    background-color: var(--cor-breto);
+    padding: 5px; /*Definindo a largura de foro*/
+    opacity: 90%;
+    position: relative; /*permitindo uma forma relativa na tela*/
+    right: 1px;
 }
 
 nav#menu li{
-    display: inline-block; /*Vai ser exibido na mesma linha*/
+    list-style: none; /*Esconde o marcador*/
+    text-transform: uppercase; /*Maiusculo*/
+    top:auto;
+    text-align: center;
+    display: inline-block; /*Ficando em linha*/
+    
+}
+
+nav#menu li a{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:var(--cor-cinzar);
+    display: block;
+    text-decoration: none;
+    display: block; /*Tranformando um uma caixa para toda a área ser clicável*/
+    font-weight: 700; /*Bold*/
     padding: 10px; /*Interno do itens*/
-    margin: 5 px; /*Fora do itens*/   
+   
 }
 
 nav#menu li:hover{
-    background-color: #EFF6FF;
-    transition: 0.7s; /*Transição da animação do Menu*/
-    opacity: 80%;
-}
-
-nav#menu a{
-    color:#D1D5DB;
-    text-decoration: none;
-    display: block;
-}
-nav#menu a:hover{
-    color: #000000;
-    transition: 0.7s;
-}
-
-nav#menu h1{
-    position: absolute;
-    display: block;
-    color: #D1D5DB;
-   
+    background-color: var(--cor-azulescuro);
     
+    transition: 0.7s; /*Transição da animação do Menu*/
+    opacity: 90%; /*Transparência na caixa*/
 }
+
+
+nav#menu a:hover{
+    color: var(--cor-Branco);
+    transition: color 0.4s;
+}
+
 /*Main*/
 #capa{
     position: relative;
     height: 300px;
-    text-align: center; /*Alinha verticalmente*/
     display: block; /*Permiti que maior flexibilidade*/
-    justify-content: center; /*Conteúdo horizontal*/
-    align-items: center; /*Deixar o itens no meio*/
-    font-size: 24px;
     overflow: hidden; /* Garante que o conteúdo do ::before não extrapole, passou seja cortado */
-  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#capa h1{
+    font-size: 40px;
+    font-weight:bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--cor-cinzar);
+}
+
+.cursor{
+    display: inline-block;
+    width: 1px;
+    animation: blink 0.8s steps(1) infinite;
+}
+
+@keyframes blink {
+    50%{
+        opacity: 0%;
+    }
 }
 
 #capa::before{
@@ -132,4 +121,13 @@ div{
     height: 300px;
     background-color: #D1D5DB;
     align-items: center;    
+}
+
+/*Configuração das Imagens.Display -> Renderização. Essa caixas estão block uma caixa em cima da outra,
+coloquei como inline -> uma caixa na frente do Outro*/
+
+/*gap -> Distância de Uma foto entre outra*/
+.image-conteiner{
+    display: flex;
+    gap: 20px;
 }
