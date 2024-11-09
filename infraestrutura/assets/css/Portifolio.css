@@ -11,7 +11,7 @@
     --cor-cinzar: #D1D5DB;
 }
 
-*{
+*{   
     margin: 0;
     padding: 0;
 }
@@ -25,6 +25,21 @@ body{
     text-align: center;
     
 }
+
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .elemento {
+      min-width: 200px; /* Para telas menores, a largura mínima será 200px */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .elemento {
+      min-width: 150px; /* Para telas ainda menores, a largura mínima será 150px */
+    }
+  }
+
 
 /*Navegações*/
 
@@ -42,13 +57,11 @@ nav#menu li{
     top:auto;
     text-align: center;
     display: inline-block; /*Ficando em linha*/
-    
 }
 
 nav#menu li a{
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color:var(--cor-cinzar);
-    display: block;
     text-decoration: none;
     display: block; /*Tranformando um uma caixa para toda a área ser clicável*/
     font-weight: 700; /*Bold*/
@@ -88,14 +101,18 @@ nav#menu a:hover{
 }
 
 .cursor{
-    display: inline-block;
+    display: inline-block; /*Permiti controlar o tamanho e comportamento do curos*/
     width: 1px;
-    animation: blink 0.8s steps(1) infinite;
+    animation: blink 0.8s steps(1) infinite; /*Permiti animação no css*/
+/*blink -> Animação Personalizada*/
+/*steps(1) -> Permiti fica piscando de forma nítida sem transição. Infinite -> Animação Infinita*/
+
 }
 
+/*Permiti animação no css, ele controla a visibilidade do curos ao longo do tempo*/
 @keyframes blink {
-    50%{
-        opacity: 0%;
+    50%{ /*Metade do tempo =*/
+        opacity: 0%; /* Define o cursor como invisível no meio do ciclo */
     }
 }
 
@@ -111,7 +128,7 @@ nav#menu a:hover{
     background-size: cover;
     background-position: center;
     /*Configuração para alterar o fundo da imagens*/
-    filter: blur(5px);
+    filter: blur(7px);
     z-index: -1;
 }
 div{
@@ -120,7 +137,9 @@ div{
     color: #000000;
     height: 300px;
     background-color: #D1D5DB;
-    align-items: center;    
+    align-items: center;
+
+    margin: 0 auto; 
 }
 
 /*Configuração das Imagens.Display -> Renderização. Essa caixas estão block uma caixa em cima da outra,
@@ -130,4 +149,23 @@ coloquei como inline -> uma caixa na frente do Outro*/
 .image-conteiner{
     display: flex;
     gap: 20px;
+}
+
+/*Footer*/
+
+.footer{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    padding: 0;
+    background-color: var(--cor-breto);
+    color: var(--cor-cinzar);   
+}
+
+.footer p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight: 100;
 }
