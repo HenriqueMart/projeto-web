@@ -3,17 +3,6 @@
 /*Navegação*/
 @import url(header-footer/header.css);
 
-
-/*Configuração da Página Completa*/
-body{
-    color: #000000;
-    background-color: #EFF6FF;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
-    text-align: center;
-    
-}
-
 /*Footer*/
 
 .footer{
