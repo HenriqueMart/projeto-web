@@ -1,61 +1,187 @@
 @charset "UTF-8";
+/* Define o charset para o arquivo CSS como UTF-8, para suportar caracteres especiais */
 
-*{
+/* Reset global */
+* {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; /* Garante que o box model inclua padding e bordas nas dimensões */
+}
+
+/* Estilos para o corpo da página */
+body {
     width: 100%;
-    height: auto;
-}
-header{
-    display: flex;
-    width: 150px;
-    height: 25px;
-}
-
-
-body{
     height: 100%;
-    background-color: aliceblue;
+    background-color: #303f9f; /* Define a cor de fundo principal da página */
 }
 
-table{
-    border: 1px solid black;
-}
-.linha{
-    border: 1px solid black;
+/* Cabeçalho */
+header {
+    display: flex; /* Ativa o Flexbox para organizar os elementos em linha */
+    justify-content: space-between; /* Espaça os elementos (h1 e menu) nas extremidades */
+    align-items: center; /* Centraliza verticalmente os elementos */
+    text-transform: uppercase; /* Transforma todo o texto em maiúsculas */
+    padding: 10px; /* Espaçamento interno no cabeçalho */
+    border-bottom: 2px solid rgba(0, 0, 0, 0.631);/* Cor de fundo do cabeçalho */
+    color: #ffffff; /* Cor do texto no cabeçalho */
 }
 
-.box{
+/* Estilo do título no cabeçalho */
+header h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0; /* Remove margens padrão */
+}
+
+menu {
+    display: inline-block; /* Permite que o menu ocupe apenas o espaço necessário */
+}
+
+/* Estilos de navegação */
+nav li {
+    display: inline-block; /* Exibe os itens do menu em linha */
+}
+
+nav ul {
+    display: flex; /* Organiza os itens em linha */
+    gap: 15px; /* Espaçamento entre os itens */
+    padding: 0;
+    height: auto;
+    text-align: center;
+}
+
+nav .box-imagens{
     display: flex;
+}
+
+nav .img{
+    width: 40px; /* Ajuste o tamanho conforme necessário */
+    height: 40px;
+    border-right: 5px;
+    border-radius: 50%; /* Deixa a imagem redonda */
+}
+
+.navegacao {
+    flex-grow: 1; /* Expande para ocupar o espaço entre o título e a imagem */
+    display: flex;
+    justify-content: center; /* Centraliza o menu */
+}
+
+/* Links da navegação */
+.navegacao a {
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff; /* Cor do texto dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-weight: 700; /* Negrito */
+    padding: 10px; /* Espaçamento interno dos itens */
+}
+
+/* Animação do menu */
+.navegacao li:hover {
+    background-color: #ffffff; /* Muda o fundo ao passar o mouse */
+    transition: 0.7s; /* Tempo da transição */
+    opacity: 90%; /* Reduz a opacidade ao passar o mouse */
+}
+
+.navegacao a:hover {
+    color: black; /* Muda a cor do texto ao passar o mouse */
+    transition: color 0.4s; /* Tempo da transição de cor */
+}
+
+/* Menu de Edição */
+.editor {
+    display: flex;
+    width: 100vw;
+    height: 25px;
+    gap: 10px; /* Espaçamento entre os itens */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: center; /* Centraliza os itens verticalmente */
+    background-color: #00000050; /* Fundo com opacidade para o editor */
+}
+
+/* Estilos do campo de pesquisa */
+.pesquisar {
+    display: flex;
+    gap: 5px; /* Espaço entre o campo de texto e o botão */
+}
+
+.pesquisar input {
+    border-radius: 8px; /* Arredonda os cantos */
+    width: 150px; /* Define a largura do campo */
+    text-align: center; /* Centraliza o texto */
+}
+
+.pesquisar button, .cad-usuario button {
+    border-radius: 8px; /* Arredonda os cantos */
+    width: 70px;
+    height: 20px;
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    cursor: pointer; /* Define o cursor de ponteiro */
+    border: 1px solid black;
+}
+
+/* Botão de cadastro de usuário */
+.cad-usuario {
+    width: 100px;
+    height: 20px;
     justify-content: center;
     align-items: center;
+}
+
+/* Efeito hover para botões no main */
+main button:hover {
+    background-color: #303f9f; /* Muda a cor de fundo ao passar o mouse */
+    color: #f0e0d6; /* Muda a cor do texto ao passar o mouse */
+}
+
+/* Tabela */
+table {
+    border: 1px solid black; /* Borda externa da tabela */
+}
+
+.linha {
+    border: 1px solid black; /* Borda das linhas */
+}
+
+/* Caixa de conteúdo */
+.box {
+    background-color: #ffffff; /* Fundo branco */
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
     height: auto;
     width: 100%;
-    
-    
 }
-.conteudo{
+
+/* Conteúdo da página */
+.conteudo {
     display: block;
     flex-direction: column;
     padding: 20px;
     font-size: 12px;
 }
-.conteudo h1{
+
+/* Título dentro do conteúdo */
+.conteudo h1 {
     text-align: center;
     font-size: 30px;
     font-weight: 300;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.conteudo caption{
+/* Legenda da tabela */
+.conteudo caption {
     font-size: 20px;
     font-weight: 100;
     font-family: 'Courier New', Courier, monospace;
 }
 
-.nav{
+/* Navegação */
+.nav {
     font-size: 14px;
     font-weight: 500;
-    border: 1px solid black;
+    border: 1px solid black; /* Borda para destacar o item de navegação */
 }
