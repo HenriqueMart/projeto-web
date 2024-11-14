@@ -140,6 +140,8 @@ main button:hover {
 /* Tabela */
 table {
     border: 1px solid black; /* Borda externa da tabela */
+    width: 70vw;
+    height: 100px;
 }
 
 .linha {
