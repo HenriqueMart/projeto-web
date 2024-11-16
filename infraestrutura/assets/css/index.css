@@ -129,6 +129,7 @@ article {
     font-size: 14px; /* Tamanho da fonte */
     padding: 10px; /* Padding no botão */
     cursor: pointer; /* Cursor em forma de mão */
+    border-radius: 20px;
 }
 
 .conteudo a {
