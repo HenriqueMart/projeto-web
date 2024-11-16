@@ -27,18 +27,42 @@
     
     <!-- Cabeçalho principal da página, define o título principal com a tag <h1> -->
     <main>
-        <h2>Confere nosso blog</h2>
-    <!-- tem menor importância que o <h1> -->
-    
-        <p class="Link-atv3">Itens para Comprar na Black Friday</p>
-        <!-- Parágrafo que descreve o conteúdo, "Itens para Comprar na Black Fridey" -->
-        <a class="Link-atv3" href="/infraestrutura/page/Home/atividade-3.html" target="_parent" rel="next"> Página da atividade 3</a>
-        <!-- Link que aponta para outra página (atividade-3.html). 
-             O atributo 'href' indica o caminho da página.
-             O atributo 'target="_parent"' abre o link na janela principal ou no pai da página atual.
-             O atributo 'rel="next"' sugere que este link é para a próxima página em uma sequência de navegação. -->
+        <article>
+        <!--Precisei criar uma div para ter de forma em linha o título em cima dos card utilizando o flex Box-->
+            <div class="titulo-main">
+                <h2>Projetos</h2>
+            </div>
+            <!--Precisei criar uma linha para configurar a seções dentro dessa linha, visto que precisei ter um título dentro do article-->
+            <div class="linha">
+                <!--Caixa-->
+                <div class="box">
+                    <!--Conteúdo-->
+                    <div class="conteudo">
+                        <img src="infraestrutura/assets/imagens/Imagens-index-f1.jpg" alt="f1" >
+                        <h3>Formula 1</h3>
+                        <p>Este projeto consiste no desenvolvimento de um site dedicado à Fórmula 1, com o objetivo de exibir informações detalhadas sobre os corredores. A aplicação utiliza uma API para buscar e apresentar os dados de forma dinâmica e atualizada, garantindo uma experiência informativa e interativa para os usuários.</p>
+                        <button class="button"><a href="infraestrutura/page/Home/f1/f1.html" target="_blank">Acessar</a></button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="conteudo">
+                        <img src="infraestrutura/assets/imagens/Imagens-index-portfolio.jpg" alt="portfolio">
+                        <h3>Portfólio</h3>
+                        <p>Este projeto reúne todas as minhas habilidades e conhecimentos adquiridos ao longo da minha jornada de aprendizado em tecnologia. Ele inclui links para projetos que desenvolvi, destacando minhas conquistas e experiências, além de uma seção dedicada a informações sobre mim e meu progresso nessa área.</p>
+                        <button class="button"><a href="infraestrutura/page/Home/portifólio.html" target="_blank">Acessar</a></button>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="conteudo">
+                        <img src="infraestrutura/assets/imagens/Imagens-index-sandbox.jpg" alt="SandBox">
+                        <h3>SandBox</h3>
+                        <p>Esta página foi projetada para auxiliar no estudo e na implementação de conceitos essenciais de HTML e CSS.</p>
+                        <button class="button"><a href="infraestrutura/page/Home/sandbox.html" target="_blank">Acessar</a></button>
+                    </div>
+                </div>
+            </div>
+        </article>
        </main>
-    
        <footer class="footer">
         <p>Todos os direitos Reservados &copy; 2024 José Henrique</p>
     </footer>

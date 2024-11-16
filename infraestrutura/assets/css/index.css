@@ -1,110 +1,198 @@
-@charset "UTF-8";
+@charset "UTF-8"; /* Define a codificação de caracteres como UTF-8 */
 
-/*Header & Footer*/
-@import url(header-footer/header.css);
-@import url(header-footer/footer.css);
+/* Header & Footer */
+@import url(header-footer/header.css); /* Importa o arquivo CSS do cabeçalho */
+@import url(header-footer/footer.css); /* Importa o arquivo CSS do rodapé */
 
-body{
-    color: var(--cor-cinzar);
-    background-color: var(--cor-azulescuro);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 14px;
+/* Estilos gerais do corpo da página */
+body {
+    color: var(--cor-cinzar); /* Cor do texto (provavelmente variável CSS) */
+    background-color: #38383F; /* Cor de fundo do corpo */
+    font-family: 'Times New Roman', Times, serif; /* Fonte do texto */
+    font-size: 14px; /* Tamanho da fonte */
+    margin: 0; /* Remove a margem padrão */
+    padding: 0; /* Remove o padding padrão */
 }
 
-/*NAVEGAÇÃO*/
-header{
-    /*PERMITINDO FLEXIBILIDADE NOS ITENS*/
-   display: flex;  
-   /*ESPAÇO ENTRE OS ITENS*/
-   justify-content: space-between;
-   /*Dando espeço para cabeçalho*/
-   padding-bottom: 25px
+/* Estilos do cabeçalho */
+header {
+    display: flex; /* Usa flexbox para disposição dos itens */
+    justify-content: space-between; /* Espaçamento entre os itens do cabeçalho */
+    padding-bottom: 25px; /* Espaçamento inferior no cabeçalho */
 }
 
 header p {
-    align-self: flex-start;
-    text-align: left;
-    /*Garantido que ele fica na esquerda, tirando os espaçamento*/
-    margin: 0;
-
+    align-self: flex-start; /* Alinha o parágrafo no início do cabeçalho */
+    text-align: left; /* Alinha o texto à esquerda */
+    margin: 15px auto; /* Define margens ao redor do parágrafo */
+    font-size: 10px; /* Tamanho da fonte do parágrafo */
 }
 
-header h1{
-    margin: 0;
-}
-nav{
-    padding: 10px;
-    background-color: var(--cor-azul);
-    font-size: 20px;
-    text-align: center;
-    width: 100%;
-    display: block;
-}
-nav li{
-    width: 100%;
-    display: inline;
-    margin: 20px;
-    padding: 5px;
-    
+header h1 {
+    margin: 0; /* Remove a margem */
+    font-size: 20px; /* Define o tamanho da fonte */
+    margin: 10px auto; /* Define margens automáticas */
 }
 
-nav li:hover{
-    background-color: var(--cor-breto);
-    transition: 0.6s;
-    opacity: 80%;
-    
+/* Estilos do menu de navegação */
+nav {
+    padding: 10px; /* Adiciona padding ao redor do menu */
+    background-color: #15151E; /* Cor de fundo do menu */
+    text-align: center; /* Centraliza o texto do menu */
+    width: 100%; /* Define a largura como 100% */
+    display: block; /* Exibe como bloco */
 }
 
-.menu a{
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
+nav li {
+    display: inline; /* Exibe os itens de lista em linha */
+    margin: 20px; /* Espaçamento entre os itens */
+    padding: 5px; /* Padding ao redor dos itens */
 }
 
-
-/*TÍTULOS*/
-h1, h2, h3{
-    font-size: 30px;
-}
-p{
-    font-size: 14px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-a{
-    color: #D1D5DB;
-    
+.menu a {
+    font-size: 12px; /* Tamanho da fonte dos links do menu */
+    font-weight: bold; /* Deixa o texto em negrito */
+    display: inline-block; /* Exibe os links como blocos em linha */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    text-transform: capitalize; /* Deixa a primeira letra de cada palavra em maiúscula */
 }
 
-.Link-atv3{
-    display: inline;
+nav li:hover {
+    transition: 0.8s; /* Efeito de transição de 0.6 segundos */
+    opacity: 80%; /* Reduz a opacidade ao passar o mouse */
 }
 
-main{
-    display: block;
-    margin: 10px;
-    padding: 10px;
-    width: 100%;
-    height: auto;
+nav a {
+    color: #D1D5DB; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
 }
 
-/*Utilizando Media Queries, definindo o tamanho apra celular de forma resposível*/
-@media (max-width: 450px){
-    nav li {
-        font-size: 14px;
-        font-weight: bold;
+/* Estilos do conteúdo principal */
+main, article {
+    margin: 0; /* Remove a margem */
+    padding: 0; /* Remove o padding */
+    width: 100%; /* Largura 100% */
+}
+
+article {
+    display: flex; /* Usa flexbox para o layout */
+    background-color: #D1D5DB; /* Cor de fundo do artigo */
+    height: auto; /* Altura automática */
+    padding: 15px; /* Padding ao redor do artigo */
+    gap: 20px; /* Espaçamento entre os itens dentro do artigo */
+    overflow-x: hidden; /* Impede o overflow horizontal */
+    box-sizing: border-box; /* Ajusta o box model */
+    flex-direction: column; /* Alinha os itens na direção vertical */
+    align-items: center; /* Centraliza os itens */
+}
+
+/* Estilos do título principal */
+.titulo-main {
+    width: 100%; /* Largura 100% */
+    text-align: center; /* Alinha o texto ao centro */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    font-size: 24px; /* Tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: #15151E; /* Cor do texto */
+}
+
+/* Estilos das linhas de conteúdo */
+.linha {
+    width: 100%; /* Largura 100% */
+    gap: 20px; /* Espaçamento entre os itens */
+    display: flex; /* Usa flexbox */
+    flex-direction: row; /* Direção horizontal */
+    flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+    justify-content: center; /* Centraliza os itens */
+}
+
+/* Estilos das caixas de conteúdo */
+.box {
+    flex: 1 1 300px; /* Flexbox com base de 300px */
+    max-width: 80%; /* Largura máxima de 80% */
+    height: auto; /* Altura automática */
+    box-sizing: border-box; /* Ajusta o box model */
+    padding: 15px; /* Padding dentro da caixa */
+    background-color: #15151E; /* Cor de fundo da caixa */
+    border-radius: 20px; /* Bordas arredondadas */
+    text-align: center; /* Alinha o texto ao centro */
+    overflow: hidden; /* Impede o overflow do conteúdo */
+}
+
+.conteudo h3, p, button {
+    margin: 10px 0; /* Margem em torno dos elementos h3, p e button */
+}
+
+.conteudo button {
+    font-weight: bold; /* Deixa o texto do botão em negrito */
+    background-color: #D1D5DB; /* Cor de fundo do botão */
+    font-size: 14px; /* Tamanho da fonte */
+    padding: 10px; /* Padding no botão */
+    cursor: pointer; /* Cursor em forma de mão */
+}
+
+.conteudo a {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: #15151E; /* Cor do link */
+}
+
+.conteudo button:hover {
+    background-color: #d1d5db86; /* Cor do botão ao passar o mouse */
+    transition: 0.5s; /* Transição suave ao passar o mouse */
+}
+
+.box img {
+    width: 100%; /* Largura da imagem 100% */
+    height: auto; /* Altura automática */
+    border-radius: 10px; /* Bordas arredondadas na imagem */
+}
+
+/* Media Queries para responsividade */
+
+/* Para dispositivos com largura mínima de 500px */
+@media (min-width: 500px) {
+    header p {
+        font-size: 1rem; /* Tamanho maior para o parágrafo */
     }
-    header h1{
-        font-size: 20px;
-        margin: 10px auto;
+    header h1 {
+        font-size: 30px; /* Tamanho maior para o h1 */
     }
-    header p{
-        margin: 15px auto;
-        font-size: 10px;
+    .menu a {
+        font-size: 1.1rem; /* Tamanho maior para os links do menu */
     }
-    main h2{
-        font-size: 20px;
+    .box {
+        max-width: 40%; /* Largura máxima das caixas */
     }
-    main p{
-        font-size: 14px;
+    .footer p {
+        font-size: 1.1rem; /* Tamanho maior para o texto do rodapé */
+    }
+}
+
+/* Para dispositivos com largura mínima de 800px */
+@media (min-width: 800px) {
+    header p {
+        font-size: 1.2rem; /* Tamanho maior para o parágrafo */
+    }
+    header h1 {
+        font-size: 40px; /* Tamanho maior para o h1 */
+    }
+    .menu a {
+        font-size: 1.2rem; /* Tamanho maior para os links do menu */
+    }
+
+    .titulo-main {
+        font-size: 30px; /* Tamanho maior para o título principal */
+    }
+    .box {
+        max-width: 20%; /* Largura máxima das caixas */
+    }
+    .conteudo h3 {
+        font-size: 1.4rem; /* Tamanho maior para o h3 */
+    }
+    .conteudo p {
+        font-size: 1rem; /* Tamanho maior para o parágrafo */
+    }
+    .conteudo button {
+        font-size: 15px; /* Tamanho maior para o botão */
     }
 }
