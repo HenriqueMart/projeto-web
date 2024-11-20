@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../assets/css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="../../../assets/css/f1/f1.css">
     <link rel="shortcut icon" href="../../../assets/imagens/favicon.ico" type="image/x-icon">
     <title>Formula 1</title>
@@ -18,13 +19,13 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main >
         <section class="principal">
-            <div class="container">
+            <div class="container1">
                 <div class="overlay">
                     <div class="text-overlay">
-                        <h1>Temporada</h1>
-                        <h1>2024</h1>
+                        <h1 class="titulo-inicio">Temporada</h1>
+                        <h1 class="titulo-inicio">2024</h1>
                 </div>
             </div>
                 <video class="video"  autoplay muted loop width="100%" height="100%">
@@ -55,28 +56,86 @@
                 
             </div>
         </section>
-        <section>
-            <div class="secao2">
-                <div>
+        <section class="container">
+            <div>
+                <div class="text-center text-white pb-3">
                     <h2>Clasificação Pilotos</h2>
                 </div>
-                
-            </div>
-            <div>
+                <div class="table-responsive">
+                    <table class="table table-dark table-striped table-hover text-center">
+                        <thead> 
+                            <tr>
+                                <th>Numero</th>
+                                <th>Nome</th>
+                                <th>País</th>
+                                <th>Pontuação Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <th>Max Verstappen</th>
+                                <th>Holandes</th>
+                                <th>393</th>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>Lando Norris</th>
+                                <th>Inglaterra</th>
+                                <th>331</th>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <th>Charles Leclerc</th>
+                                <th>Mônaco</th>
+                                <th>307</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 
             </div>
         </section>
-        <section>
-            <div class="secao2">
-                <div>
-                    <h1>Clasificação Equipes</h1>
+        <section class="container">
+            <div>
+                <div class="text-center text-white border-bottom pb-3">
+                    <h2 >Clasificação Equipes</h2>
                 </div>
-                
+                <div class="table-responsive">
+                    <table class="table table-dark table-striped table-hover text-center">
+                        <thead> 
+                            <tr>
+                                <th>Numero</th>
+                                <th>Nome</th>
+                                <th>Pontuação Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>1</th>
+                                <th>McLaren</th>
+                                <th>593</th>
+                            </tr>
+                            <tr>
+                                <th>2</th>
+                                <th>Ferrari</th>
+                                <th>557</th>
+                            </tr>
+                            <tr>
+                                <th>3</th>
+                                <th>Red Bull</th>
+                                <th>544</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
     </main>
     <footer>
 
     </footer>
+
+    <script src="../../../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 </html>

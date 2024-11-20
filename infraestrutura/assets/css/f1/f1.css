@@ -5,6 +5,10 @@
     padding: 0; /* Remove preenchimento padrão de todos os elementos */
 }
 
+:root{
+    --color-preto: #15151E; 
+}
+
 /* Importação de fontes personalizadas do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Russo+One&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
@@ -70,7 +74,7 @@
 }
 
 /* Main Container */
-.container{
+.container1{
     display: flex; /* Usa flexbox para layout flexível */
     flex-direction: column; /* Organiza os elementos verticalmente */
     justify-content: space-between; /* Espaça os itens uniformemente */
@@ -84,7 +88,7 @@
     left: 0; /* Começa na esquerda */
     width: 100vw; /* Cobre a largura total da viewport */
     height: 100vh; /* Cobre a altura total da viewport */
-    background-color: black; /* Fundo preto */
+    background-color: var(--color-preto); /* Fundo preto */
     opacity: 0.8; /* Semitransparente */
     z-index: 1; /* Fica abaixo dos elementos principais */
 }
@@ -110,9 +114,9 @@
     z-index: 2; /* Fica acima da overlay */
 }
 
-.text-overlay h1{
+.titulo-inicio{
     font-family: "Russo One", sans-serif; /* Fonte personalizada */
-    font-size: 3rem; /* Texto grande */
+    font-size: 4rem; /* Texto grande */
     margin: 0; /* Remove margens padrão */
     color: rgb(172, 42, 42); /* Cor vermelha personalizada */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra no texto */
@@ -121,7 +125,7 @@
 /* Seção 2 */
 .secao2{
     display: flex; /* Usa flexbox para layout flexível */
-    background-color: #15151E; /* Fundo escuro */
+    background-color: var(--color-preto); /* Fundo escuro */
     color: aliceblue; /* Texto claro */
     height: auto; /* Altura ajustável */
     padding: 20px; /* Espaçamento interno */
@@ -135,6 +139,7 @@
     width: 100%; /* Ocupa toda a largura */
     text-align: center; /* Centraliza o texto */
     padding: 20px; /* Adiciona espaçamento interno */
+    
 }
 
 .container2{
@@ -163,7 +168,7 @@
     text-align: center; /* Centraliza o texto */
     margin: 0; /* Remove margens padrão */
     border-radius: 10px; /* Bordas arredondadas */
-    background-color: rgb(0, 0, 0); /* Fundo preto */
+    background-color: var(--color-preto); /* Fundo preto */
     outline: 1px solid #15151E; /* Bordas */
     opacity: 40%; /* Transparência */
     overflow: hidden; /* Esconde conteúdo excedente */
@@ -172,6 +177,7 @@
 .pilotos > div:hover{
     outline: 1px solid rgb(255, 0, 0); /* Destaca bordas ao passar o mouse */
     opacity: 90%; /* Aumenta a opacidade */
+    transition: 0.8s; /*Tempo de Transição*/
 }
 
 .pilotos div > img{
@@ -185,6 +191,9 @@
     flex-direction: column; /* Organiza os textos verticalmente */
     align-items: center; /* Centraliza horizontalmente */
     font-size: 15px; /* Tamanho do texto */
+}
+main{
+    background-color: var(--color-preto);
 }
 
 /* Responsividade */
