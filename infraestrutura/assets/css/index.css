@@ -43,8 +43,9 @@ nav {
     display: block; /* Exibe como bloco */
 }
 
-nav li {
-    display: inline; /* Exibe os itens de lista em linha */
+.menu li {
+    display: inline-block; /* Exibe os itens de lista em linha */
+    list-style: none;
     margin: 20px; /* Espaçamento entre os itens */
     padding: 5px; /* Padding ao redor dos itens */
 }
