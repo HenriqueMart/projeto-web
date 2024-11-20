@@ -1,223 +1,209 @@
-@charset "UTF-8";
+@charset "UTF-8"; /* Define a codificação do arquivo como UTF-8 para garantir suporte a caracteres especiais */
 
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Remove margens padrão de todos os elementos */
+    padding: 0; /* Remove preenchimento padrão de todos os elementos */
 }
 
-
-
+/* Importação de fontes personalizadas do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Russo+One&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
+/* Classe para usar a fonte "Russo One" */
 .russo-one-regular {
-    font-family: "Russo One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
+    font-family: "Russo One", sans-serif; /* Define a fonte personalizada */
+    font-weight: 400; /* Define o peso da fonte como normal */
+    font-style: normal; /* Define o estilo da fonte como normal */
+}
 
-/*Menu*/
+/* Menu */
 .menu{
-    display: flex;
-    position: absolute;
-    width: 100%;
-    background-color: rgba(255, 0, 0, 0.037);
-    align-items: center;
-    justify-content: space-between;
-    outline: 1px solid rgba(255, 0, 0, 0.374);
-    z-index: 2;
+    display: flex; /* Usa flexbox para organizar os itens horizontalmente */
+    position: absolute; /* Posiciona o menu de forma fixa em relação à viewport */
+    width: 100%; /* O menu ocupa toda a largura da tela */
+    background-color: rgba(255, 0, 0, 0.037); /* Fundo com transparência leve */
+    align-items: center; /* Centraliza verticalmente os itens do menu */
+    justify-content: space-between; /* Espaça os itens uniformemente */
+    outline: 1px solid rgba(255, 0, 0, 0.374); /* Bordas com transparência leve */
+    z-index: 2; /* Garante que o menu fique acima de outros elementos */
 }
 
 .menu ul{
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;   
+    display: flex; /* Organiza os itens da lista horizontalmente */
+    list-style: none; /* Remove os marcadores da lista */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
 }
 
 .menu li{
-    display: block;
-    padding: 5px;
-    margin: 0px 10px;
-    text-transform: uppercase;
-    font-style: italic;
+    display: block; /* Cada item da lista ocupa uma linha */
+    padding: 5px; /* Adiciona espaçamento interno */
+    margin: 0px 10px; /* Espaçamento entre os itens */
+    text-transform: uppercase; /* Converte o texto para maiúsculas */
+    font-style: italic; /* Aplica estilo itálico */
 }
 
 .menu a{
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 14px;
+    text-decoration: none; /* Remove o sublinhado dos links */
+    color: white; /* Define a cor do texto dos links como branco */
+    font-weight: bold; /* Deixa o texto em negrito */
+    font-size: 14px; /* Define o tamanho da fonte */
 }
 
 .video{
-    object-fit: cover; /* Faz com que o vídeo ocupe o espaço sem distorcer */
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    top: 0;
-    left: 0;
+    object-fit: cover; /* Ajusta o vídeo para preencher o espaço sem distorcer */
+    width: 100vw; /* O vídeo ocupa toda a largura da viewport */
+    height: 100vh; /* O vídeo ocupa toda a altura da viewport */
+    position: relative; /* Posiciona o vídeo em relação ao contêiner pai */
+    top: 0; /* Alinha o vídeo ao topo */
+    left: 0; /* Alinha o vídeo à esquerda */
 }
 
 .menu h1{
-    text-align: center;
-    padding: 10px;
-    font-size:2rem;
-    font-family: "Russo One", sans-serif;   
-    margin: 0;
-    color: red;
-    text-transform: uppercase;
-    text-wrap: bold;
-    font-style: italic;
-  
+    text-align: center; /* Centraliza o texto horizontalmente */
+    padding: 10px; /* Adiciona espaçamento interno */
+    font-size: 2rem; /* Define o tamanho do texto como grande */
+    font-family: "Russo One", sans-serif; /* Define a fonte personalizada */
+    margin: 0; /* Remove margens padrão */
+    color: red; /* Define a cor do texto como vermelho */
+    text-transform: uppercase; /* Converte o texto para maiúsculas */
+    font-style: italic; /* Aplica estilo itálico */
 }
 
-
-/*Main*/
-
-
+/* Main Container */
 .container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100vh;
-    overflow: hidden;
+    display: flex; /* Usa flexbox para layout flexível */
+    flex-direction: column; /* Organiza os elementos verticalmente */
+    justify-content: space-between; /* Espaça os itens uniformemente */
+    height: 100vh; /* Altura total da viewport */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites */
 }
 
 .overlay{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    opacity: 0.8;
-    z-index: 1;
+    position: absolute; /* Posiciona a overlay cobrindo a tela */
+    top: 0; /* Começa no topo */
+    left: 0; /* Começa na esquerda */
+    width: 100vw; /* Cobre a largura total da viewport */
+    height: 100vh; /* Cobre a altura total da viewport */
+    background-color: black; /* Fundo preto */
+    opacity: 0.8; /* Semitransparente */
+    z-index: 1; /* Fica abaixo dos elementos principais */
 }
 
 .principal {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 60px);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-
+    position: relative; /* Posiciona em relação ao contêiner pai */
+    width: 100%; /* Ocupa toda a largura disponível */
+    height: calc(100vh - 60px); /* Altura ajustada para incluir outros elementos */
+    display: flex; /* Usa flexbox para organizar o conteúdo */
+    align-items: center; /* Centraliza os itens verticalmente */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites */
 }
 
 .text-overlay{
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    gap: 20;
-    left: 30px;
-    bottom: 10%;
-    text-align: left;
-    z-index: 2;
+    position: absolute; /* Posiciona o texto sobreposto ao conteúdo */
+    display: flex; /* Usa flexbox para organizar os textos */
+    flex-direction: column; /* Organiza os textos verticalmente */
+    gap: 20; /* Espaçamento entre elementos */
+    left: 30px; /* Posiciona à esquerda */
+    bottom: 10%; /* Posiciona próximo ao rodapé */
+    text-align: left; /* Alinha o texto à esquerda */
+    z-index: 2; /* Fica acima da overlay */
 }
-
 
 .text-overlay h1{
-    font-family: "Russo One", sans-serif;
-    font-size: 3rem;
-    margin: 0;
-    color: rgb(172, 42, 42);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-family: "Russo One", sans-serif; /* Fonte personalizada */
+    font-size: 3rem; /* Texto grande */
+    margin: 0; /* Remove margens padrão */
+    color: rgb(172, 42, 42); /* Cor vermelha personalizada */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra no texto */
 }
 
-/*Seções*/
+/* Seção 2 */
 .secao2{
-    display: flex;
-    background-color: #15151E;
-    color: aliceblue;
-    height: auto;
-    padding: 20px;
-    flex-grow: 33%;
-    box-sizing: border-box;
-    flex-direction: column;
-    align-items: center;
-
+    display: flex; /* Usa flexbox para layout flexível */
+    background-color: #15151E; /* Fundo escuro */
+    color: aliceblue; /* Texto claro */
+    height: auto; /* Altura ajustável */
+    padding: 20px; /* Espaçamento interno */
+    flex-grow: 33%; /* Ocupa parte proporcional do espaço disponível */
+    box-sizing: border-box; /* Inclui borda e padding no cálculo total */
+    flex-direction: column; /* Organiza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
 }
 
 .pilotos {
-    width: 100%;
-    text-align: center;
-    padding: 20px;
+    width: 100%; /* Ocupa toda a largura */
+    text-align: center; /* Centraliza o texto */
+    padding: 20px; /* Adiciona espaçamento interno */
 }
 
 .container2{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+    display: flex; /* Usa flexbox para organizar os itens horizontalmente */
+    flex-direction: row; /* Organiza os itens em linha */
+    gap: 20px; /* Espaçamento entre itens */
 }
 
 .pilotos > h2{
-    font-size: 30px;
-    padding-bottom: 20px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
+    font-size: 30px; /* Tamanho do texto */
+    padding-bottom: 20px; /* Espaçamento inferior */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Fonte personalizada */
 }
 
 .pilotos div > h3{
-    z-index: 1;
+    z-index: 1; /* Define a ordem de empilhamento */
 }
 
-
 .pilotos > div{
-    flex: 2;
-    height: auto;
-    display: inline-block;
-    min-width:200px;
-    max-width: 50px;
-    box-sizing: border-box;
-    text-align: center;
-    margin: 0;
-    border-radius: 10px;
-    background-color: rgb(0, 0, 0);
-    outline: 1px solid #15151E;
-    opacity: 40%;
-    overflow: hidden;
+    flex: 2; /* Controla o tamanho relativo no layout */
+    height: auto; /* Altura ajustável */
+    display: inline-block; /* Exibe como bloco em linha */
+    min-width: 200px; /* Largura mínima */
+    max-width: 50px; /* Largura máxima */
+    box-sizing: border-box; /* Inclui bordas e preenchimento no tamanho total */
+    text-align: center; /* Centraliza o texto */
+    margin: 0; /* Remove margens padrão */
+    border-radius: 10px; /* Bordas arredondadas */
+    background-color: rgb(0, 0, 0); /* Fundo preto */
+    outline: 1px solid #15151E; /* Bordas */
+    opacity: 40%; /* Transparência */
+    overflow: hidden; /* Esconde conteúdo excedente */
 }
 
 .pilotos > div:hover{
-    outline: 1px solid rgb(255, 0, 0);
-    opacity: 90%;
+    outline: 1px solid rgb(255, 0, 0); /* Destaca bordas ao passar o mouse */
+    opacity: 90%; /* Aumenta a opacidade */
 }
 
 .pilotos div > img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    
+    width: 100%; /* Ajusta a largura da imagem ao contêiner */
+    height: 100%; /* Ajusta a altura da imagem ao contêiner */
+    object-fit: cover; /* Ajusta a imagem sem distorção */
 }
 
 .pilotos div > h3{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
-    bottom: 1px;
-    font-size: 15px;
+    display: flex; /* Layout flexível */
+    flex-direction: column; /* Organiza os textos verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    font-size: 15px; /* Tamanho do texto */
 }
 
-
+/* Responsividade */
 @media (min-width: 850px){
     .text-overlay h1{
-        font-size: 5rem;
+        font-size: 5rem; /* Texto maior para telas grandes */
     }
     .pilotos div > img{
-        width: 100%;
-        height: auto;
+        width: 100%; /* Ajusta largura da imagem */
+        height: auto; /* Altura ajustável */
     }
     .pilotos div > h3{
-        font-size: 30px;
+        font-size: 30px; /* Texto maior */
     }
     .pilotos > h2{
-        font-size: 50px;
+        font-size: 50px; /* Título maior */
     }
     .pilotos > div{
-        max-width: 250px;
-        height: auto;
+        max-width: 250px; /* Largura maior */
+        height: auto; /* Altura ajustável */
     }
 }
