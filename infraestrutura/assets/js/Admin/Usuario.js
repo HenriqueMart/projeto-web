@@ -34,7 +34,7 @@ function carregarUsuarios() {
                     <td class="linha">${usuario.email}</td>
                     <td class="linha">${usuario.login}</td>
                     <td class="linha">
-                        <button class="editar" data-id="${usuario.id}>Editar</button>      
+                        <button class="editar" data-id="${usuario.id}">Editar</button>      
                     </td>
                     <td class="linha">
                         <button class="excluir" data-id="${usuario.id}">Excluir</button>
