@@ -3,7 +3,6 @@ const URL = "http://localhost:8080/usuarios/";
 
 document.getElementById("btn_atualizar").addEventListener("click", atualizar);
 document.getElementById("btn_novoUsuario").addEventListener("click", Adicionarusuario);
-document.getElementById("btn_novoUsuario").addEventListener("click", Adicionarusuario);
 
 const mensagem = document.querySelector("#response_usuarios");
 
@@ -34,10 +33,10 @@ function carregarUsuarios() {
                     <td class="linha">${usuario.email}</td>
                     <td class="linha">${usuario.login}</td>
                     <td class="linha">
-                        <button class="editar" data-id="${usuario.id}">Editar</button>      
+                    <button class="editar" data-id="${usuario.id}">Editar</button>      
                     </td>
                     <td class="linha">
-                        <button class="excluir" data-id="${usuario.id}">Excluir</button>
+                    <button class="excluir" data-id="${usuario.id}">Excluir</button>
                     </td>
                 `;
 
@@ -46,17 +45,22 @@ function carregarUsuarios() {
             });
 
             //monitor o eventos dentro da tabela de bottões
-            eventosDosBotoes(".excluir"); // Adicionando eventos nos botões
+            eventosDosBotoes();
+
         })
         .catch(error => console.log(error));
 }
 
 /* Adicionar evento de clique nos botões de exclusão */
-function eventosDosBotoes(metodo) {
-    document.querySelectorAll(metodo).forEach(botao => {
+function eventosDosBotoes() {
+    document.querySelectorAll(".excluir, .editar").forEach(botao => {
         botao.addEventListener("click", function () {
             const id = this.getAttribute("data-id"); // Pegando o ID do usuário
-            metodo === ".excluir"? deletarUsuario(id): atualizarUsuario(id);
+            if (this.classList.contains("excluir")) {
+                deletarUsuario(id); // Chama a função de exclusão
+            } else if (this.classList.contains("editar")) {
+                atualizarUsuario(id); // Chama a função de edição
+            }
         });
     });
 }
@@ -157,22 +161,38 @@ document.getElementById("btn_enviar").addEventListener("click", () => {
 
 function atualizarUsuario(id){
 
-    const tabela = document.getElementById("tabelaUsuarios"); // Obtendo tbody
+    let form = document.querySelector("#response_usuarios");
 
-    eventosDosBotoes(".editar");
+    console.log(id)
 
-    mensagem = `
-    <p>Nome</p><input type="text" id="nome" placeholder="Henrique">
-    <p>Usuário</p><input type="text" id="login" placeholder="henriquemart">
-    <p>E-mail</p><input type="email" id="email" placeholder="henrique@gmail.com">
-    <p>Senha</p><input type="password" id="senha" placeholder="1234">
-    <button id="btn_enviar" class="enviar">Enviar</button>
-    <button id="btn_cancelar" class="enviar">Cancelar</button>`;
+    // Criando o formulário de edição com os valores preenchidos
+    form.innerHTML = `
+        <p>Nome</p><input type="text" id="nome" placeholder="Henrique">
+        <p>Usuário</p><input type="text" id="login" placeholder="henriquemart">
+        <p>E-mail</p><input type="email" id="email" placeholder="henrique@gmail.com">
+        <p>Senha</p><input type="password" id="senha" placeholder="1234">
+        <button id="btn_enviar" class="enviar">Atualizar</button>
+        <button id="btn_cancelar" class="enviar">Cancelar</button>
+    `;
 
 
-    /*document.getElementById("btn_enviar").addEventListener("click", () => {
+    document.getElementById("btn_enviar").addEventListener("click", () => {
+        
+        let usuario = {
+
+            nome: document.getElementById("nome").value.trim(),
+            login: document.getElementById("login").value.trim(),
+            email: document.getElementById("email").value.trim(),
+            senha: document.getElementById("senha").value.trim()
+        }
+
+         // Validação: Verifica se os campos estão preenchidos
+         if (!usuario.nome || !usuario.login || !usuario.email || !usuario.senha) {
+            alert("Por favor, preencha todos os campos corretamente!");
+            return;
+        }
+        
         fetch(URL + `update/${id}`, {
-
             method: "PUT",
             headers: {
                 "Content-Type": "application/json" // Define o tipo de conteúdo como JSON
@@ -181,13 +201,13 @@ function atualizarUsuario(id){
         })
         .then(response => response.json()) // Converte a resposta para JSON
             .then(data => {
-                console.log("Usuário cadastrado com sucesso", data);
-                form.innerHTML = "<h2> Usuário cadastrado com sucesso!</h2>"; // Exibe mensagem de sucesso
+                console.log("Usuário Atualizado com sucesso", data);
+                form.innerHTML = "<h2> Usuário Atualizado com sucesso!</h2>"; // Exibe mensagem de sucesso
                 atualizar(); // Chama uma função externa (possivelmente para atualizar a interface)
             })
             .catch(error => {
-                console.error("Erro ao cadastrar usuário", error);
-                form.innerHTML = "<h2> Erro ao cadastrar Usuário!</h2>"; // Exibe mensagem de erro
+                console.error("Erro ao Atualizado usuário", error);
+                form.innerHTML = "<h2> Erro ao Atualizado Usuário!</h2>"; // Exibe mensagem de erro
             });
-        }*/
+        })
 }
