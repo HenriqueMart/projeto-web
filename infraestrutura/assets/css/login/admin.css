@@ -113,7 +113,7 @@ nav .img{
     text-align: center; /* Centraliza o texto */
 }
 
-.pesquisar button, .cad-usuario button {
+.pesquisar button, .cad-usuario button, .enviar{
     border-radius: 8px; /* Arredonda os cantos */
     width: 70px;
     height: 20px;
@@ -131,6 +131,30 @@ nav .img{
     justify-content: center;
     align-items: center;
 }
+
+/*Configuração de input de cadastro de usuário*/
+#response_usuarios{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: bolder;
+    padding: 10px;
+    background-color: #a19e9b;
+    border-radius: 25px;
+}
+
+#response_usuarios input{
+    width: auto;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-align: center;
+}
+
+#response_usuarios p{
+    display: inline;
+    padding: 0 5px;
+}
+
 
 /* Efeito hover para botões no main */
 main button:hover {

@@ -28,16 +28,22 @@
                 <button type="submit">Pesquisar</button>
             </div>
             <div class="cad-usuario">
-                <button type="submit">Novo Usuário</button>
+                <button type="submit" id="btn_novoUsuario">Novo Usuário</button>
+            </div>
+            <div class="cad-usuario">
+                <button type="submit" id="btn_atualizar">Atualizar</button>
             </div>
         </div>
         <article class="box">
             <div class="conteudo">
                 <h1>Área do Administrador</h1>
+                <div id="response_usuarios"></div>
+                <button id="btn_enviar"></button>
                 <table>
-                    <caption>Usuário Registrado</caption>
+                    <caption>Usuários Registrados</caption>
                     <thread>
                         <tr class="cabecario">
+                            <td class="nav">ID</td> 
                             <td class="nav">Nome</td> 
                             <td class="nav">E-mail</td>
                             <td class="nav">Login</td>
@@ -45,35 +51,15 @@
                             <td class="nav">Excluir</td>
                         </tr>
                     </thread>
-                    <tbody>
-                        <tr class="coluna">
-                            <td class="linha">José Henrique</td>
-                            <td class="linha">teste@gmail.com</td>
-                            <td class="linha">21/11/2024</td>
-                            <td class="linha"><button type="submit">Editar</button></td>
-                            <td class="linha"><button type="submit">Excluir</button></td>
-                        </tr>
-                        <tr class="coluna">
-                            <td class="linha">João Gustavo</td>
-                            <td class="linha">teste@gmail.com</td>
-                            <td class="linha">24/09/2024</td>
-                            <td class="linha"><button type="submit">Editar</button></td>
-                            <td class="linha"><button type="submit">Excluir</button></td>
-                        </tr>
-                        <tr class="coluna">
-                            <td class="linha">Felipe de Santana</td>
-                            <td class="linha">teste@gmail.com</td>
-                            <td class="linha">01/03/2024</td>
-                            <td class="linha"><button type="submit">Editar</button></td>
-                            <td class="linha"><button type="submit">Excluir</button></td>
-                        </tr>
-                        
-                    </tbody>
+                    <!--JavaScript Adiciona os elementos-->
+                    <tbody id="tabelaUsuarios"></tbody>
                     
                 </table>
             </div>
             
         </article>
     </main>
+
+    <script src="../../../assets/js/Admin/Usuario.js"></script>
 </body>
 </html>
